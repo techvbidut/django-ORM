@@ -92,3 +92,14 @@ class Person(models.Model):
         country = models.CharField(max_length=30)
 ```
 (One Person can only have one citizenship)
+
+
+### Some useful <b>Field options</b>
+1. `null`: If True, Django will store empty values as NULL in the database. Default is False.
+2. `blank`: If True, the field is allowed to be blank. Default is False. (null is purely database-related, whereas blank is validation-related. If a field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.)
+3. `choices`: A sequence of 2-tuples to use as choices for this field. The first element in each tuple is the value that will be stored in the database. The second element is displayed by the field’s form widget.
+4. `default`: The default value for the field.
+5. `help_text`: Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your field isn’t used on a form.
+6. `primary_key`: If True, this field is the primary key for the model.
+7. `unique`: If True, this field must be unique throughout the table.
+8. `verbose_name`: Optional first positional argument – a verbose name. 
