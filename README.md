@@ -103,3 +103,67 @@ class Person(models.Model):
 6. `primary_key`: If True, this field is the primary key for the model.
 7. `unique`: If True, this field must be unique throughout the table.
 8. `verbose_name`: Optional first positional argument – a verbose name. 
+
+
+## Migrations
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+1. `makemigrations` command will commit model changes into migration files. 
+2. `migrate` command can be used to apply changes to the database schema.
+
+<b>Rolling Back</b>
+Migrations can be rolled back to a specific migration using the migrate command and providing the name of the migration file to roll back to as an argument.
+```
+python manage.py migrate 0001
+```
+
+
+### Model instance
+
+1. Create Model Instance
+
+```
+model_instance = ModelName(field1="field 1 value")
+```
+
+2. Save Model Instance
+
+```
+model_instance.save()
+```
+
+3. View All Model Instances
+
+```
+model_instance = ModelName.objects.all()
+```
+
+4. View First Model Instance
+
+```
+first_instance = ModelName.objects.first()
+```
+
+5. Get field value of a Model Instance
+
+```
+mode_instance.field_name
+
+```
+
+6. Update field value of a Model Instance
+
+```
+mode_instance.field_name = "New value"
+```
+(After this you have to save this updated instance using `.save()`)
+
+7. Delete a Model Instance
+
+```
+first_instance.delete()
+```
+
