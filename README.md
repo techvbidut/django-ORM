@@ -1,4 +1,4 @@
-# Django ORM Mastery
+# Django ORM Cheatsheet
 
 ## What is ORM?
 Object–relational mapping in computer science is a programming technique for converting data between type systems using object-oriented programming languages. 
